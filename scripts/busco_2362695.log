@@ -1,0 +1,24 @@
+2025-11-12 09:42:19 DEBUG:busco.run_BUSCO	Command line: /srv/ss/sib/ibu/rocky8/2023072800/software/BUSCO/5.4.2-foss-2021a/bin/busco -i assembly.all.maker.proteins.fasta.renamed.longest.fasta -l brassicales_odb10 -o busco_output -m proteins
+2025-11-12 09:42:19 INFO:busco.run_BUSCO	***** Start a BUSCO v5.4.2 analysis, current time: 11/12/2025 09:42:19 *****
+2025-11-12 09:42:19 DEBUG:busco.ConfigManager	Getting config file
+2025-11-12 09:42:19 INFO:busco.ConfigManager	Configuring BUSCO with local environment
+2025-11-12 09:42:19 INFO:busco.BuscoConfig	Mode is proteins
+2025-11-12 09:42:19 ERROR:busco.BuscoRunner	Input /data/users/afairman/euk_org_ann/scripts/assembly.all.maker.proteins.fasta.renamed.longest.fasta does not exist
+2025-11-12 09:42:19 DEBUG:busco.BuscoRunner	Input /data/users/afairman/euk_org_ann/scripts/assembly.all.maker.proteins.fasta.renamed.longest.fasta does not exist
+Traceback (most recent call last):
+  File "/srv/ss/sib/ibu/rocky8/2023072800/software/BUSCO/5.4.2-foss-2021a/lib/python3.9/site-packages/busco/run_BUSCO.py", line 70, in run
+    self.load_config()
+  File "/srv/ss/sib/ibu/rocky8/2023072800/software/BUSCO/5.4.2-foss-2021a/lib/python3.9/site-packages/busco/run_BUSCO.py", line 62, in load_config
+    self.config_manager.load_busco_config_main()
+  File "/srv/ss/sib/ibu/rocky8/2023072800/software/BUSCO/5.4.2-foss-2021a/lib/python3.9/site-packages/busco/BuscoLogger.py", line 62, in wrapped_func
+    self.retval = func(*args, **kwargs)
+  File "/srv/ss/sib/ibu/rocky8/2023072800/software/BUSCO/5.4.2-foss-2021a/lib/python3.9/site-packages/busco/ConfigManager.py", line 56, in load_busco_config_main
+    self.config_main.validate()
+  File "/srv/ss/sib/ibu/rocky8/2023072800/software/BUSCO/5.4.2-foss-2021a/lib/python3.9/site-packages/busco/BuscoConfig.py", line 529, in validate
+    self._check_required_input_exists()
+  File "/srv/ss/sib/ibu/rocky8/2023072800/software/BUSCO/5.4.2-foss-2021a/lib/python3.9/site-packages/busco/BuscoConfig.py", line 718, in _check_required_input_exists
+    raise BatchFatalError(
+busco.Exceptions.BatchFatalError: Input /data/users/afairman/euk_org_ann/scripts/assembly.all.maker.proteins.fasta.renamed.longest.fasta does not exist
+2025-11-12 09:42:19 ERROR:busco.BuscoRunner	BUSCO analysis failed!
+2025-11-12 09:42:19 ERROR:busco.BuscoRunner	Check the logs, read the user guide (https://busco.ezlab.org/busco_userguide.html), and check the BUSCO issue board on https://gitlab.com/ezlab/busco/issues
+
